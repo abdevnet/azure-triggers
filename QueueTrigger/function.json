@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "greeting-creation-requests",
+      "connection": "triggstoragesouthus_STORAGE"
+    },
+    {
+      "type": "blob",
+      "name": "outputBlob",
+      "path": "greeting-requests/{rand-guid}",
+      "connection": "triggstoragesouthus_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
